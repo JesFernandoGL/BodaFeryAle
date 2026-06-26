@@ -4,6 +4,7 @@ $( document ).ready(function() {
 nameInvitado();
 activateCounter();
 activateTimeline();
+animationsInit();
 
 let timerInterval = '';
 
@@ -70,6 +71,42 @@ function activateTimeline(){
 
     const percent = Math.min(actualPercent, 100)
     $('.CounterLine').css('width', `${percent}%`)
+}
+
+function animationsInit(){
+    
+      secBabys = new WOW(
+        {
+        boxClass:     'SectionNames-Inv-Wrapp',      // default
+        animateClass: 'animate__fadeInUp', // default
+        offset:       0,          // default
+        mobile:       true,       // default
+        live:         true        // default
+      }
+      )
+      counter = new WOW(
+        {
+        boxClass:     'DateInv-CounterWrapp',      // default
+        animateClass: 'animate__fadeInUp', // default
+        offset:       200,          // default
+        mobile:       true,       // default
+        live:         true        // default
+      }
+      )
+      titles = new WOW(
+        {
+        boxClass:     'Header-IconTitle',      // default
+        animateClass: 'animate__fadeInUp', // default
+        offset:       300,          // default
+        mobile:       true,       // default
+        live:         true        // default
+      }
+      ) 
+
+      secBabys.init();
+      counter.init();
+      titles.init();
+
 }
 
 })

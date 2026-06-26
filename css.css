@@ -53,14 +53,14 @@ body:has(.ModalActive){
 }
 
 .Section-SecondTitle{
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 26px;
     font-weight: 600;
 }
 
 .SectionPar-Text{
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 26px;
     text-align: center;
 }
 
@@ -209,25 +209,84 @@ main{
     font-size: 32px;
 }
 
-.nameInvitado-Wrapp{
-    font-family: "Newsreader", serif;
-    font-optical-sizing: auto;
-    font-weight: normal;
-    font-size: 18px;
-    line-height: 28px;
+/*Section babys*/
+.SectionBabys-ImgWrapp{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding: 60px 0 0 0;
 }
+
+.SectionBabys-Img{
+    width: 100%;
+    max-width: 480px;
+}
+
+.SectionBabys-Overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.SectionBabys-Nombres-Wrapp{
+    position: relative;
+    margin-top: -40px;
+}
+
+.WaveDivision{
+    height: 150px;
+    overflow: hidden;
+    filter: drop-shadow(0 -6px 4px #00000050);
+    margin-bottom: -74px;
+}
+
+.WaveDivision svg{
+    height: 100%;
+    width: 100%;
+}
+
+.SectionBabys-Nombres-Content{
+    padding: 0 16px 24px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    position: relative;
+}
+
+.SectionBabys-Nombres-Nombre{
+    font-family: "Parisienne", cursive;
+    font-size: 30px;
+    line-height: 48px;
+    max-width: 200px;
+    text-align: center;
+    width: 100%;
+}
+
+.SectionBabys-Nombres-And{
+    font-family: "Parisienne", cursive;
+    font-size: 32px;
+    line-height: 36px;
+    text-align: center;
+}
+
+/*Fin Secion Babys*/
 
 /*Section Invitacion*/
 .SectionTickets{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 24px;
+    gap: 32px;
     font-size: 16px;
 }
 
 .NameInvitado{
-    font-size: 20px;
+    font-size: 30px;
+    line-height: 48px;
+    font-family: "Parisienne", cursive;
 }
 
 .SectionTickets-Wrapp{
@@ -409,3 +468,39 @@ main{
     width: 42px;
 }
 /*Fin Section Counter*/
+
+@media (max-width: 520px){
+    .Section-SecondTitle {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .SectionPar-Text{
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .SectionBabys-Nombres-Nombre{
+        font-size: 24px;
+        line-height: 38px;
+        max-width: 180px;
+    }
+
+    .NameInvitado{
+        font-size: 24px;
+        line-height: 38px;
+    }
+}
+
+@media (max-width: 400px){
+    .SectionBabys-Nombres-Nombre{
+        font-size: 20px;
+        line-height: 36px;
+        max-width: 150px;
+    }
+
+    .NameInvitado{
+        font-size: 20px;
+        line-height: 36px;
+    }
+}
