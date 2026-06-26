@@ -79,7 +79,7 @@ function animationsInit(){
         {
         boxClass:     'SectionNames-Inv-Wrapp',      // default
         animateClass: 'animate__fadeInUp', // default
-        offset:       0,          // default
+        offset:       200,          // default
         mobile:       true,       // default
         live:         true        // default
       }
@@ -97,7 +97,7 @@ function animationsInit(){
         {
         boxClass:     'Header-IconTitle',      // default
         animateClass: 'animate__fadeInUp', // default
-        offset:       300,          // default
+        offset:       200,          // default
         mobile:       true,       // default
         live:         true        // default
       }
