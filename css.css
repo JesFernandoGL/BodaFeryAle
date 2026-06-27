@@ -56,6 +56,7 @@ body:has(.ModalActive){
     font-size: 18px;
     line-height: 26px;
     font-weight: 600;
+    text-align: center;
 }
 
 .SectionPar-Text{
@@ -251,8 +252,8 @@ main{
     padding: 0 16px 24px 16px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 8px;
+    justify-content: space-evenly;
+    gap: 4px;
     position: relative;
 }
 
@@ -267,8 +268,11 @@ main{
 
 .SectionBabys-Nombres-And{
     font-family: "Parisienne", cursive;
-    font-size: 32px;
-    line-height: 36px;
+    position: absolute;
+    font-size: 48px;
+    line-height: 44px;
+    opacity: 0.6;
+    bottom: -8px;
     text-align: center;
 }
 
@@ -469,7 +473,81 @@ main{
 }
 /*Fin Section Counter*/
 
+/*Section Itinerary*/
+.Section-Itinerary{
+    padding: 40px 0;
+}
+
+.Section-Itinerary-Content{
+    padding-top: 40px;
+}
+
+.Section-Itinerary-LineImg{
+    width: 100%;
+}
+
+.Section-Itinerary-Content-Wrapp{
+    position: relative;
+}
+
+.Section-Itinerary-Event{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: fit-content;
+    position: absolute;
+}
+
+.Section-Itinerary-Event-Time{
+    font-size: 32px;
+    line-height: 32px;
+}
+
+.Section-Itinerary-Event-Name{
+    font-size: 32px;
+    line-height: 32px;
+    font-family: "Parisienne", cursive;
+}
+
+.Section-Itinerary-Event:nth-of-type(1){
+    top: 8%;
+    left: 50%;
+    transform: translateX(-108px);
+}
+
+.Section-Itinerary-Event:nth-of-type(2){
+    top: 30%;
+    left: 50%;
+    transform: translateX(42px);
+}
+.Section-Itinerary-Event:nth-of-type(3){
+    top: 52%;
+    left: 50%;
+    transform: translateX(-120px);
+}
+.Section-Itinerary-Event:nth-of-type(4){
+    top: 84%;
+    left: 50%;
+    transform: translateX(-108px);
+}
+
+/*Fin Section Itinerary*/
+
 @media (max-width: 520px){
+    .SectionBabys-Nombres-Nombre{
+        font-size: 26px;
+        line-height: 40px;
+        max-width: 180px;
+    }
+
+    .NameInvitado{
+        font-size: 26px;
+        line-height: 38px;
+    }
+}
+
+@media (max-width: 380px){
     .Section-SecondTitle {
         font-size: 16px;
         line-height: 24px;
@@ -479,20 +557,6 @@ main{
         font-size: 16px;
         line-height: 24px;
     }
-
-    .SectionBabys-Nombres-Nombre{
-        font-size: 24px;
-        line-height: 38px;
-        max-width: 180px;
-    }
-
-    .NameInvitado{
-        font-size: 24px;
-        line-height: 38px;
-    }
-}
-
-@media (max-width: 400px){
     .SectionBabys-Nombres-Nombre{
         font-size: 20px;
         line-height: 36px;
