@@ -5,6 +5,7 @@ nameInvitado();
 activateCounter();
 activateTimeline();
 animationsInit();
+eventsMenu();
 
 let timerInterval = '';
 
@@ -84,6 +85,15 @@ function animationsInit(){
         live:         true        // default
       }
       )
+      secdate = new WOW(
+        {
+        boxClass:     'Section-Date-Wrapp',      // default
+        animateClass: 'animate__fadeInUp', // default
+        offset:       200,          // default
+        mobile:       true,       // default
+        live:         true        // default
+      }
+      )
       counter = new WOW(
         {
         boxClass:     'DateInv-CounterWrapp',      // default
@@ -93,9 +103,19 @@ function animationsInit(){
         live:         true        // default
       }
       )
-      titles = new WOW(
+      sectionIglesia = new WOW(
         {
-        boxClass:     'Header-IconTitle',      // default
+        boxClass:     'SectionIglesia',      // default
+        animateClass: 'animate__fadeInUp', // default
+        offset:       200,          // default
+        mobile:       true,       // default
+        live:         true        // default
+      }
+      ) 
+
+      sectionSalon = new WOW(
+        {
+        boxClass:     'SectionRecepcion',      // default
         animateClass: 'animate__fadeInUp', // default
         offset:       200,          // default
         mobile:       true,       // default
@@ -104,9 +124,24 @@ function animationsInit(){
       ) 
 
       secBabys.init();
+      secdate.init();
       counter.init();
-      titles.init();
+      sectionIglesia.init();
+      sectionSalon.init();
 
+}
+
+function eventsMenu(){
+    $('.MenuInv-Btn').click(function(){
+        $('.MenuInv-Btn').removeClass('MenuBtn-Active');
+        $(this).addClass('MenuBtn-Active');
+
+        const el = $(this).attr('data-section');
+
+        $('html, body').animate({
+            scrollTop: $(`.${el}`).offset().top
+        }, 1000);
+    });
 }
 
 })

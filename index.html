@@ -15,8 +15,38 @@
 </head>
 <body>
     <main>
+        <div class="MenuInv-Player-Wrapp">
+            <div class="PlayerComp">
+                <div class="Player-Wrapp">
+                    <img class="Player-Album" src="./assets/album-jonas.jpg">
+                    <div class="Player-Titles">
+                        <p class="Player-Title">Mirror to the Sky</p>
+                        <p class="Player-Subtitle">Jonas Brothers</p>
+                    </div>
+                </div>
+            </div>
+            <div class="MenuInv-Comp">
+                <div class="MenuInv-Wrapp">
+                    <div class="MenuInv-Btn" data-section="Section-Asistencia">
+                        <img class="MenuInv-BtnImg" src="./assets/asistencia-icon.png">
+                    </div>
+                    <div class="MenuInv-Btn" data-section="Section-Date">
+                        <img class="MenuInv-BtnImg" src="./assets/calendar-icon.png">
+                    </div>
+                    <div class="MenuInv-Btn MenuBtn-Active" data-section="SectionTickets">
+                        <img class="MenuInv-BtnImg" src="./assets/boleto-icon.png">
+                    </div>
+                    <div class="MenuInv-Btn" data-section="SectionIglesia">
+                        <img class="MenuInv-BtnImg" src="./assets/iglesia-icon.png">
+                    </div>
+                    <div class="MenuInv-Btn" data-section="SectionRecepcion">
+                        <img class="MenuInv-BtnImg" src="./assets/copas-icon.png">
+                    </div>
+                </div>
+            </div>
+        </div>
         <section class="Header-Inv">
-            <img class="HeaderBg-Img" src="./assets/imgheader.jpg" alt="img">
+            <img class="HeaderBg-Img" src="./assets/portada1.jpg" alt="img">
             <div class="HeaderOverlay"></div>
             <div class="Header-Inv-Content">
                 <div class="PreHeader">
@@ -71,11 +101,11 @@
         <section class="Section-Date BgBeige BlueText">
             <div class="SectionDate-Wrapp">
                 <div class="Section-Date-Photo-Wrapp">
-                    <img class="Section-Date-Photo" src="./assets/imgheader.jpg">
+                    <img class="Section-Date-Photo" src="./assets/img-celular-fecha.jpg">
                     <div class="Section-Date-Photo-Overlay"></div>
                 </div>
-                <div class="Section-Date-Wrapp">
-                    <div class="Header-IconTitle animate__animated">
+                <div class="Section-Date-Wrapp animate__animated">
+                    <div class="Header-IconTitle">
                         <img class="Header-Icon" src="./assets/calendar-icon.png">
                         <p class="SectionTitle">Fecha</p>
                     </div>
@@ -124,9 +154,9 @@
             
         </section>
 
-        <section class="SectionInvitacion Section-Adress">
-            <div class="Section-Adress-Wrapp">
-                <div class="Header-IconTitle animate__animated">
+        <section class="Section-Adress">
+            <div class="Section-Adress-Wrapp SectionInvitacion SectionIglesia animate__animated">
+                <div class="Header-IconTitle">
                     <img class="Header-Icon" src="./assets/iglesia-icon.png">
                     <p class="SectionTitle">Ceremonia Religiosa</p>                
                 </div>
@@ -141,8 +171,8 @@
                     <a class="PrimaryBtn" href="">Ver ubicación</a>
                 </div>
             </div>
-            <div class="Section-Adress-Wrapp">
-                <div class="Header-IconTitle animate__animated">
+            <div class="Section-Adress-Wrapp SectionInvitacion SectionRecepcion animate__animated">
+                <div class="Header-IconTitle">
                     <img class="Header-Icon" src="./assets/copas-icon.png">
                     <p class="SectionTitle">Recepción</p>                
                 </div>
@@ -188,6 +218,28 @@
                 </div>
             </div>
         </section>
+
+        <section class="Section-Frase Section-FraseBG WhiteText">
+            <div class="Section-Frase-Content">
+                <p class="SectionPar-Text">Por encima de todo, vístanse de amor, que es el vínculo perfecto.</p>
+                <p class="SectionPar-Subtitle">Colosenses 3:14</p>
+            </div>
+        </section>
+
+        <section class="SectionInvitacion BgLila WhiteText Section-Asistencia">
+            <div class="Header-IconTitle">
+                <img class="Header-Icon" src="./assets/asistencia-icon-white.png">
+                <p class="SectionTitle">Asistencia</p>                
+            </div>
+            <div class="SectionContent-Wrapp">
+                <p class="SectionPar-Text">Nos gustaría compartir este momento juntos por lo que pedimos de tu confirmación para asistir</p>
+            </div>
+            
+        </section>
+
+        <footer class="SectionInvitacion BgBlue WhiteText FooterInvitacion">
+            <p class="SectionPar-Text">Te esperamos</p>
+        </footer>
     </main>
     
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>

@@ -77,7 +77,7 @@ body:has(.ModalActive){
 }
 
 .Section-Adress-Wrapp:nth-of-type(n + 2){
-    margin-top: 48px;
+    margin-top: -16px;
 }
 
 .SectionContent-Wrapp{
@@ -194,7 +194,7 @@ main{
     font-family: "Parisienne", cursive;
     font-weight: 400;
     font-style: normal;
-    margin: 36px 0 100px 0;
+    margin: 36px 0 80px 0;
     font-size: 54px;
     display: flex;
     align-items: center;
@@ -209,6 +209,79 @@ main{
     gap: 12px;
     font-size: 32px;
 }
+
+/*Section Menu*/
+.MenuInv-Player-Wrapp{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 10;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    box-shadow: 0 -3px 6px 0 rgb(0 0 0 / 30%);
+}
+
+.PlayerComp{
+    padding: 10px 24px;
+    background: rgb(7 40 83 / 90%);
+    border-bottom: 2px solid #87A7D2;
+}
+
+.Player-Wrapp{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.Player-Album{
+    width: 34px;
+    border-radius: 4px;
+    vertical-align: middle;
+}
+
+.Player-Titles{
+    color: #FFFFFF;
+}
+
+.Player-Title{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+}
+
+.Player-Subtitle{
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.MenuInv-Comp{
+    background: #FFF9F3;
+    padding: 0 24px;
+}
+
+.MenuInv-Wrapp{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.MenuInv-Btn{
+    width: 40px;
+    padding: 6px 0 10px 0;
+    border-top: 4px solid transparent;
+}
+
+.MenuInv-Btn.MenuBtn-Active{
+    border-color: #7268A5;
+}
+
+.MenuInv-BtnImg{
+    width: 100%;
+    vertical-align: middle;
+}
+
+/*Fin Section Menu*/
 
 /*Section babys*/
 .SectionBabys-ImgWrapp{
@@ -533,6 +606,35 @@ main{
 }
 
 /*Fin Section Itinerary*/
+
+/*Section Frase*/
+.Section-Frase{
+    padding: 100px 20px;
+}
+.Section-FraseBG{
+    background-image: linear-gradient(rgb(5 8 66 / 55%), rgb(5 8 66 / 55%)), url(./assets/manitas.jpg);
+}
+
+.Section-Frase-Content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 24px;
+}
+.SectionPar-Subtitle{
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 300;
+}
+/*Fin Section Frase*/
+
+/*Footer*/
+.FooterInvitacion{
+    padding-bottom: 160px;
+}
+/*Fin Section*/
 
 @media (max-width: 520px){
     .SectionBabys-Nombres-Nombre{
