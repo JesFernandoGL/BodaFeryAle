@@ -80,7 +80,7 @@ function animationsInit(){
         {
         boxClass:     'SectionNames-Inv-Wrapp',      // default
         animateClass: 'animate__fadeInUp', // default
-        offset:       200,          // default
+        offset:       250,          // default
         mobile:       true,       // default
         live:         true        // default
       }
@@ -89,7 +89,7 @@ function animationsInit(){
         {
         boxClass:     'Section-Date-Wrapp',      // default
         animateClass: 'animate__fadeInUp', // default
-        offset:       200,          // default
+        offset:       250,          // default
         mobile:       true,       // default
         live:         true        // default
       }
@@ -98,7 +98,7 @@ function animationsInit(){
         {
         boxClass:     'DateInv-CounterWrapp',      // default
         animateClass: 'animate__fadeInUp', // default
-        offset:       200,          // default
+        offset:       250,          // default
         mobile:       true,       // default
         live:         true        // default
       }
@@ -107,7 +107,7 @@ function animationsInit(){
         {
         boxClass:     'SectionIglesia',      // default
         animateClass: 'animate__fadeInUp', // default
-        offset:       200,          // default
+        offset:       250,          // default
         mobile:       true,       // default
         live:         true        // default
       }
@@ -117,7 +117,7 @@ function animationsInit(){
         {
         boxClass:     'SectionRecepcion',      // default
         animateClass: 'animate__fadeInUp', // default
-        offset:       200,          // default
+        offset:       250,          // default
         mobile:       true,       // default
         live:         true        // default
       }

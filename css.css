@@ -76,8 +76,8 @@ body:has(.ModalActive){
     width: 74px;
 }
 
-.Section-Adress-Wrapp:nth-of-type(n + 2){
-    margin-top: -16px;
+.SectionsWrapp .SectionInvitacion:nth-of-type(n + 2){
+    padding-top: 24px;
 }
 
 .SectionContent-Wrapp{
@@ -139,6 +139,25 @@ body:has(.ModalActive){
     padding: 14px 12px;
     font-size: 18px;
     line-height: 24px;
+    text-decoration: none;
+}
+
+.PrimaryBtn.WhiteBtn{
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+}
+
+.SecondaryBtn{
+    width: 100%;
+    max-width: 380px;
+    border: 1px solid #76579E;
+    color: #76579E;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 4px;
+    padding: 8px 12px;
+    font-size: 14px;
+    line-height: 22px;
     text-decoration: none;
 }
 
@@ -613,6 +632,9 @@ main{
 }
 .Section-FraseBG{
     background-image: linear-gradient(rgb(5 8 66 / 55%), rgb(5 8 66 / 55%)), url(./assets/manitas.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .Section-Frase-Content{
@@ -622,6 +644,8 @@ main{
     justify-content: center;
     text-align: center;
     gap: 24px;
+    max-width: 400px;
+    margin: 0 auto;
 }
 .SectionPar-Subtitle{
     font-size: 16px;
@@ -629,11 +653,93 @@ main{
     font-weight: 300;
 }
 /*Fin Section Frase*/
+/*Section Hospedaje*/
+.Section-Hospejade-Header{
+    padding-bottom: 1204x;
+    padding-top: 24px;  
+}
+
+.Section-Hospedaje-Content{
+    padding: 0 20px;
+    padding-bottom: 44px;
+}
+
+.Section-Hospedaje-Content-Wrapp{
+    margin-top: -80px;
+}
+
+.Section-Hospedaje-Carrusel{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    overflow-x: auto;    
+    padding: 6px 0;
+}
+
+.Section-Hospedaje-Carrusel::-webkit-scrollbar{
+    display: none;
+}
+
+.Section-Hospejade-Carrusel-Card{
+    border: 1px solid #AFA9D5;
+    border-radius: 4px;
+    overflow: hidden;
+    min-width: 260px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 6px 0 rgb(0 0 0 / 14%);
+    align-self: stretch;
+}
+
+.CarruselHosp-Card-Img{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.CarruselHosp-Card-Content{
+    padding: 16px 12px;
+}
+
+.CarruselHosp-Card-Title{
+    font-weight: 600;
+}
+
+.CarruselHosp-Card-Datos{
+    margin-top: 8px;
+}
+
+.CarruselHosp-Card-Dato{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.CarruselHosp-Card-DatoIcon{
+    width: 28px;
+}
+
+.CarruselHosp-Card-DatoTitle{
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.CarruselHosp-Card-Btn{
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+/*Fin Section Hospedaje*/
 
 /*Footer*/
 .FooterInvitacion{
     padding-bottom: 160px;
 }
+
 /*Fin Section*/
 
 @media (max-width: 520px){
