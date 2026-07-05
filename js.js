@@ -6,6 +6,7 @@ activateCounter();
 activateTimeline();
 animationsInit();
 eventsMenu();
+validationSectionVisibleMenu();
 
 let timerInterval = '';
 
@@ -142,6 +143,31 @@ function eventsMenu(){
             scrollTop: $(`.${el}`).offset().top
         }, 1000);
     });
+}
+
+
+function validationSectionVisibleMenu(){
+    const seccionAsistencia = $(".Section-Asistencia")[0];
+    const seccionFecha = $(".Section-Date")[0];
+    const seccionBoletos = $(".SectionTickets")[0];
+    const seccionIglesia = $(".SectionIglesia")[0];
+    const seccionSalon = $(".SectionRecepcion")[0];
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                console.log(entries[0].target);
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    observer.observe(seccionAsistencia);
+    observer.observe(seccionFecha);
+    observer.observe(seccionBoletos);
+    observer.observe(seccionIglesia);
+    observer.observe(seccionSalon);
 }
 
 })

@@ -29,18 +29,23 @@
                 <div class="MenuInv-Wrapp">
                     <div class="MenuInv-Btn" data-section="Section-Asistencia">
                         <img class="MenuInv-BtnImg" src="./assets/asistencia-icon.png">
+                        <span class="MenuInv-BtnText">Asistencia</span>
                     </div>
                     <div class="MenuInv-Btn" data-section="Section-Date">
                         <img class="MenuInv-BtnImg" src="./assets/calendar-icon.png">
+                        <span class="MenuInv-BtnText">Fecha</span>
                     </div>
                     <div class="MenuInv-Btn MenuBtn-Active" data-section="SectionTickets">
                         <img class="MenuInv-BtnImg" src="./assets/boleto-icon.png">
+                        <span class="MenuInv-BtnText">Boletos</span>
                     </div>
                     <div class="MenuInv-Btn" data-section="SectionIglesia">
                         <img class="MenuInv-BtnImg" src="./assets/iglesia-icon.png">
+                        <span class="MenuInv-BtnText">Iglesia</span>
                     </div>
                     <div class="MenuInv-Btn" data-section="SectionRecepcion">
                         <img class="MenuInv-BtnImg" src="./assets/copas-icon.png">
+                        <span class="MenuInv-BtnText">Salón</span>
                     </div>
                 </div>
             </div>
@@ -79,7 +84,7 @@
                     <p class="SectionBabys-Nombres-Nombre">Alejandra Espinoza Beltrán</p>
                 </div>
             </div>  
-            <section class="SectionInvitacion SectionTickets BgBlue WhiteText">
+            <section class="SectionInvitacion SectionTickets BgBlue WhiteText" data-section="SectionTickets">
                 <p class="SectionPar-Text">Tenemos el placer de invitarte</p>
                 <p class="NameInvitado" id="nameInvitado"></p>
                 <p class="SectionPar-Text">A festejar con nosotros nuestra unión matrimonial</p>
@@ -98,7 +103,7 @@
 
         </div>
 
-        <section class="Section-Date BgBeige BlueText">
+        <section class="Section-Date BgBeige BlueText" data-section="Section-Date">
             <div class="SectionDate-Wrapp">
                 <div class="Section-Date-Photo-Wrapp">
                     <img class="Section-Date-Photo" src="./assets/img-celular-fecha.jpg">
@@ -154,7 +159,7 @@
         </section>
 
         <section class="SectionsWrapp">
-            <div class="Section-Adress-Wrapp SectionInvitacion SectionIglesia animate__animated">
+            <div class="Section-Adress-Wrapp SectionInvitacion SectionIglesia animate__animated" data-section="SectionIglesia">
                 <div class="Header-IconTitle">
                     <img class="Header-Icon" src="./assets/iglesia-icon.png">
                     <p class="SectionTitle">Ceremonia Religiosa</p>                
@@ -170,7 +175,7 @@
                     <a class="PrimaryBtn" href="">Ver ubicación</a>
                 </div>
             </div>
-            <div class="Section-Adress-Wrapp SectionInvitacion SectionRecepcion animate__animated">
+            <div class="Section-Adress-Wrapp SectionInvitacion SectionRecepcion animate__animated" data-section="SectionRecepcion">
                 <div class="Header-IconTitle">
                     <img class="Header-Icon" src="./assets/copas-icon.png">
                     <p class="SectionTitle">Recepción</p>                
@@ -226,7 +231,7 @@
         </section>
 
         <section class="SectionsWrapp">
-            <div class="SectionInvitacion Section-Asistencia BgLila WhiteText">
+            <div class="SectionInvitacion Section-Asistencia BgLila WhiteText" data-section="Section-Asistencia">
                 <div class="Header-IconTitle">
                     <img class="Header-Icon" src="./assets/asistencia-icon-white.png">
                     <p class="SectionTitle">Asistencia</p>                
@@ -315,6 +320,23 @@
 
             </div>
             
+            
+        </section>
+
+        <section class="Section-Regalos SectionInvitacion BgBeige">
+            <div class="Header-IconTitle">
+                <div class="Header-IconsWrapp">
+                    <img class="Header-Icon" src="./assets/regalos-icon.png">
+                    <img class="Header-Icon" src="./assets/sobres-icon.png">
+                </div>
+                <p class="SectionTitle">Asistencia</p>                
+            </div>
+            <div class="SectionContent-Wrapp">
+                <p class="SectionPar-Text">Nos gustaría compartir este momento juntos por lo que pedimos de tu confirmación para asistir</p>
+            </div>
+            <div class="SectionBtn-Wrapp">
+                <a class="PrimaryBtn" href="">Ver Regalos</a>
+            </div>      
             
         </section>
 

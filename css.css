@@ -161,6 +161,12 @@ body:has(.ModalActive){
     text-decoration: none;
 }
 
+.Header-IconsWrapp{
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
 main{    
     max-width: 640px;
     margin: 0 auto;
@@ -219,7 +225,7 @@ main{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 32px;
+    gap: 28px;
 }
 
 .HeaderDate{
@@ -276,7 +282,7 @@ main{
 
 .MenuInv-Comp{
     background: #FFF9F3;
-    padding: 0 24px;
+    padding: 0 20px;
 }
 
 .MenuInv-Wrapp{
@@ -286,9 +292,12 @@ main{
 }
 
 .MenuInv-Btn{
-    width: 40px;
+    width: 60px;
     padding: 6px 0 10px 0;
     border-top: 4px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .MenuInv-Btn.MenuBtn-Active{
@@ -296,8 +305,13 @@ main{
 }
 
 .MenuInv-BtnImg{
-    width: 100%;
-    vertical-align: middle;
+    width: 40px;
+}
+
+.MenuInv-BtnText{
+    font-size: 10px;
+    line-height: 16px;
+    font-weight: 600;
 }
 
 /*Fin Section Menu*/
@@ -660,8 +674,7 @@ main{
 }
 
 .Section-Hospedaje-Content{
-    padding: 0 20px;
-    padding-bottom: 44px;
+    padding-bottom: 40px;
 }
 
 .Section-Hospedaje-Content-Wrapp{
@@ -674,6 +687,10 @@ main{
     gap: 24px;
     overflow-x: auto;    
     padding: 6px 0;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    padding: 0 20px;
+    scroll-padding-left: 20px;
 }
 
 .Section-Hospedaje-Carrusel::-webkit-scrollbar{
@@ -690,11 +707,12 @@ main{
     flex-direction: column;
     box-shadow: 0 3px 6px 0 rgb(0 0 0 / 14%);
     align-self: stretch;
+    scroll-snap-align: start;
 }
 
 .CarruselHosp-Card-Img{
     width: 100%;
-    height: 100px;
+    height: 124px;
     object-fit: cover;
     object-position: center;
 }
@@ -737,7 +755,7 @@ main{
 
 /*Footer*/
 .FooterInvitacion{
-    padding-bottom: 160px;
+    padding-bottom: 180px;
 }
 
 /*Fin Section*/
