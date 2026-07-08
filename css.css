@@ -88,6 +88,36 @@ body:has(.ModalActive){
     margin-top: 16px;
 }
 
+/*Section Reproductor*/
+.HeaderMusicPlayer{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 40px;
+}
+
+.HeaderMusicPlayer-Icon{
+    width: 54px;
+}
+
+.HeaderMusicPlayer-Text{
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.MusicPause-Icon{
+    display: none;
+}
+
+body:has(.MusicActive) .MusicPause-Icon{
+    display: block;
+}
+
+body:has(.MusicActive) .MusicPlay-Icon{
+    display: none;
+}
+/*Fin Section Reproductor*/
+
 .HourSection-Wrapp{
     display: flex;
     flex-direction: column;
@@ -225,7 +255,7 @@ main{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: 28px;
+    gap: 24px;
 }
 
 .HeaderDate{
@@ -251,9 +281,29 @@ main{
     padding: 10px 24px;
     background: rgb(7 40 83 / 90%);
     border-bottom: 2px solid #87A7D2;
+    position: relative;
+    margin-top: -60px;
+    transform: translateY(100%);
+    z-index: -1;
+    opacity: .3;
+    transition: all ease 1s;
+}
+
+.PlayerComp.PlayerActive{
+    position: relative;
+    margin-top: 0;
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .Player-Wrapp{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.PlayerAlbum-TitlesWrapp{
     display: flex;
     align-items: center;
     gap: 12px;
@@ -267,6 +317,11 @@ main{
 
 .Player-Titles{
     color: #FFFFFF;
+}
+
+.PlayerBtn{
+    width: 32px;
+    vertical-align: middle;
 }
 
 .Player-Title{

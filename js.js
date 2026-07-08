@@ -7,6 +7,7 @@ activateTimeline();
 animationsInit();
 eventsMenu();
 validationSectionVisibleMenu();
+musicEvents();
 
 let timerInterval = '';
 
@@ -134,8 +135,8 @@ function animationsInit(){
 
 function eventsMenu(){
     $('.MenuInv-Btn').click(function(){
-        $('.MenuInv-Btn').removeClass('MenuBtn-Active');
-        $(this).addClass('MenuBtn-Active');
+        //$('.MenuInv-Btn').removeClass('MenuBtn-Active');
+        //$(this).addClass('MenuBtn-Active');
 
         const el = $(this).attr('data-section');
 
@@ -156,11 +157,13 @@ function validationSectionVisibleMenu(){
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                console.log(entries[0].target);
+                $(`.MenuInv-Btn`).removeClass('MenuBtn-Active');
+                const id = entries[0].target.dataset.section;
+                $(`.MenuInv-Btn[data-section=${id}]`).addClass('MenuBtn-Active');
             }
         });
     }, {
-        threshold: 0.1
+        threshold: 1
     });
 
     observer.observe(seccionAsistencia);
@@ -168,6 +171,46 @@ function validationSectionVisibleMenu(){
     observer.observe(seccionBoletos);
     observer.observe(seccionIglesia);
     observer.observe(seccionSalon);
+}
+
+
+function musicEvents(){
+    $('.HeaderMusicPlayer').click(function(){
+        if($('.MusicActive').length === 0){
+            $('.PlayerComp').addClass('MusicActive');
+            $('.PlayerComp').addClass('PlayerActive');
+            document.querySelector('.ActiveMusicTrack').play();
+        }else{
+            $('.PlayerComp').removeClass('MusicActive');
+            $('.PlayerComp').removeClass('PlayerActive');
+            document.querySelector('.ActiveMusicTrack').pause();
+        }
+    });
+
+    $('.PlayerBtn').click(function(){
+        if($('.MusicActive').length === 0){
+            $('.PlayerComp').addClass('MusicActive');
+            document.querySelector('.ActiveMusicTrack').play();
+        }else{
+            $('.PlayerComp').removeClass('MusicActive');
+            document.querySelector('.ActiveMusicTrack').pause();
+        }
+    })
+
+    $('.BtnMusicWrapp-ControlNext').click(function(){
+        document.querySelector('.ActiveMusicTrack').pause();
+        const id = Number($('.ActiveMusicTrack').attr('data-id'));
+        $('.AudioMusic').removeClass('ActiveMusicTrack')
+        if(id < 3 || (randomMusic === 0 && id < $('.AudioMusic').length )){
+            $(`.AudioMusic:nth-of-type(${id + 1})`).addClass('ActiveMusicTrack');
+            $(`.AudioMusic:nth-of-type(${id + 1})`)[0].play();            
+        }else{
+            $(`.AudioMusic:nth-of-type(1)`).addClass('ActiveMusicTrack');
+            $(`.AudioMusic:nth-of-type(1)`)[0].play();            
+        }
+
+        
+    })
 }
 
 })
