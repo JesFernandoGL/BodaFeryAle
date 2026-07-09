@@ -160,9 +160,14 @@ function validationSectionVisibleMenu(){
                 $(`.MenuInv-Btn`).removeClass('MenuBtn-Active');
                 const id = entries[0].target.dataset.section;
                 $(`.MenuInv-Btn[data-section=${id}]`).addClass('MenuBtn-Active');
+            }else{
+                const id = entries[0].target.dataset.section;
+                $(`.MenuInv-Btn[data-section=${id}]`).removeClass('MenuBtn-Active');
+                
             }
         });
     }, {
+        rootMargin: "20px 0px -60px 0px",
         threshold: 1
     });
 
