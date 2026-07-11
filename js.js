@@ -16,6 +16,7 @@ timerInterval = setInterval(function() {
     const diffTime = new Date('2026-11-14T00:00:00') - new Date();
     if(diffTime <= 0){
         clearInterval(timerInterval);
+        $('.DateInv-Counter-Num').text('00');
     }
 }, 1000);
 
@@ -36,9 +37,7 @@ function activateCounter(){
     let seconds = Math.floor((diffTime % (1000 * 60)) / 1000);    
 
     if (diffTime <= 0 && days >= -1) {
-        $('main').addClass('DayInvite');        
-        $('.DateInv-Counter-Title').text('¡Es Hoy!');
-        explosionConfetti();
+        $('.DateInv-Counter-Num').text('00');
         
     }else{
         
@@ -59,11 +58,6 @@ function activateCounter(){
         $('.DateInv-Counter-Hrs').text(hours);
         $('.DateInv-Counter-Min').text(minutes);
         $('.DateInv-Counter-Seg ').text(seconds);
-    }
-
-    if (days <= -2) {
-        $('main').addClass('NextDayInvite');
-        $('.DateInv-Counter-Title').text('Gracias por compartir este día conmigo');        
     }
 
 }
