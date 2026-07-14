@@ -361,7 +361,7 @@ main{
 
 .MenuInv-Btn{
     width: 60px;
-    padding: 6px 0 10px 0;
+    padding: 6px 0 12px 0;
     border: none;
     border-top: 4px solid transparent;
     display: flex;
@@ -382,6 +382,7 @@ main{
     font-size: 10px;
     line-height: 16px;
     font-weight: 600;
+    color: #063257;
 }
 
 /*Fin Section Menu*/
@@ -648,6 +649,28 @@ main{
     width: 42px;
 }
 /*Fin Section Counter*/
+
+/*Section Damas Caballeros Honor*/
+.SectionVestimenta-ImgPerson{
+    width: 100%;
+    max-width: 420px;
+}
+
+.SectionVestimenta-TextWrapp{
+    padding: 40px 0;
+    text-align: center;
+}
+
+.SectionVestimenta-Text{
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 28px;
+}
+
+.SectionVestimenta-CaballerosHonor{
+    margin-top: 56px;
+}
+/*Fin Damas Caballeros Honor*/
 
 /*Section Itinerary*/
 .Section-Itinerary{
