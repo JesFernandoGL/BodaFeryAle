@@ -147,6 +147,7 @@ body:has(.MusicActive) .MusicPlay-Icon{
     line-height: 36px;
     font-weight: 300;
     position: relative;
+    text-align: center;
 }
 
 .HourTitle-sm{
