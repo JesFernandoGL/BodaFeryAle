@@ -8,6 +8,7 @@ animationsInit();
 eventsMenu();
 validationSectionVisibleMenu();
 musicEvents();
+validateTable();
 
 let timerInterval = '';
 
@@ -211,6 +212,36 @@ function musicEvents(){
         
     })
 }
+
+function validateTable(){
+    fetch("./js/invitados_mesas.json")
+  .then(response => response.json())
+  .then(data => {
+    const params = new URLSearchParams(window.location.search);
+    const nameInv = params.get('name');
+    const ticketsInv = Number(params.get('tickets'));
+
+    const invitado = data.find(
+      persona => persona.nombre.toLowerCase() === nameInv.toLowerCase() && persona.numero_boletos === ticketsInv
+    );
+
+    if (invitado) {
+        const secMesa = `
+        <div class="SectionTickets-Wrapp">
+            <img class="Header-Icon" src="./assets/Mesa_blanco.png" alt="img">
+            <div class="TicketsInv-Wrapp">
+                <p class="TicketsText">Te asignamos la mesa</p>
+            </div>
+            <div class="TicketsNumber-Wrapp" style="width: auto;padding: 0 10px;height: 80px;">
+                <span class="TicketsNumber">${Array.isArray(invitado.mesa) ? invitado.mesa.join(' y ')  : invitado.mesa}</span>
+            </div>
+        </div>`;
+      $('.SectionTickets-Wrapp').after(secMesa);
+    } 
+    
+  });
+}
+
 
 })
 
